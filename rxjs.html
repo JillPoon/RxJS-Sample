@@ -1,11 +1,46 @@
 <html>
-    <head>
-        <script src="//cdn.bootcss.com/rxjs/5.2.0/Rx.min.js"></script>
-        <link href="css.css"/>
-    </head>
-    <body>
-        <div id="cart">
-            <div id="title"></div>
-        </div>
-    </body>
+
+<head>
+    <script src="https://cdn.bootcss.com/rxjs/5.2.0/Rx.min.js"></script>
+    <link type="text/css" href="css.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="card">
+        <div id="title"></div>
+    </div>
+</body>
+<script>
+    (function (document) {
+        "use strict";
+
+        function lerp(start, end) {
+            const dx = end.x - start.x;
+            const dy = end.y - start.y;
+
+            return {
+                x: start.x + dx * 0.1,
+                y: start.y + dy * 0.1,
+            };
+        }
+        const doc = document.documentElement;
+
+        const { clientWidth, clientHeight } = doc;
+
+        const card = document.querySelector('#card');
+        const title = document.querySelector('#title');
+        const mouseMove$ = Rx.Observable.fromEvent(doc, 'mousemove').map(e => ({ x: e.clientX, y: e.clientY }));
+
+        const animationFrame$ = Rx.Observable.interval(0, Rx.Scheduler.animationFrame);
+        const smoothMove$ = animationFrame$.withLatestFrom(mouseMove$, (tick, move) => move).scan(lerp);
+
+        smoothMove$.subscribe(pos => {
+            const rotX = (pos.y / clientHeight * -50) - 25;
+            const rotY = (pos.x / clientWidth * -50) - 25;
+            //title.innerHTML = `${rotX}, ${rotY}`;
+            card.style.cssText = `transform: rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+        });
+    })(document);
+</script>
+
 </html>

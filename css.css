@@ -2,37 +2,34 @@
   height: 50vmin;
   width: 90vmin;
   background-color: white;
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/181794/8442566463_5e3e1714cf_z.jpg);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/181794/8442566463_5e3e1714cf_z.jpg);
+  background-image: url(8442566463_5e3e1714cf_z.jpg);
   background-size: cover;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 10vmin;
-  color: white;
+}
+#card:before, #card:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
 }
 #card:before {
-  content: 'Hover to see the effect.';
-  display: block;
-  position: absolute;
-  font-size: 1rem;
-  bottom: 100%;
-  margin-bottom: 1rem;
-  color: #555;
-  font-weight: bold;
+  -webkit-transform: translateZ(1rem);
+          transform: translateZ(1rem);
+  box-shadow: 53vmin 37vmin 0 white, 46vmin 15vmin 0 white, 8vmin 25vmin 0 white, 14vmin 27vmin 0 white, 44vmin 15vmin 0 white, 27vmin 19vmin 0 white, 26vmin 44vmin 0 white, 78vmin 31vmin 0 white, 13vmin 23vmin 0 white, 44vmin 16vmin 0 white, 19vmin 41vmin 0 white, 68vmin 45vmin 0 white, 40vmin 49vmin 0 white, 10vmin 49vmin 0 white, 16vmin 39vmin 0 white, 34vmin 47vmin 0 white, 5vmin 33vmin 0 white, 12vmin 50vmin 0 white, 7vmin 27vmin 0 white, 46vmin 34vmin 0 white, 8vmin 20vmin 0 white, 46vmin 14vmin 0 white, 44vmin 33vmin 0 white, 20vmin 7vmin 0 white, 49vmin 6vmin 0 white, 60vmin 47vmin 0 white, 27vmin 39vmin 0 white, 78vmin 50vmin 0 white, 77vmin 16vmin 0 white, 17vmin 41vmin 0 white, 76vmin 28vmin 0 white, 61vmin 28vmin 0 white, 61vmin 19vmin 0 white, 12vmin 44vmin 0 white, 8vmin 29vmin 0 white, 7vmin 10vmin 0 white, 69vmin 31vmin 0 white, 68vmin 17vmin 0 white, 55vmin 18vmin 0 white, 40vmin 13vmin 0 white, 26vmin 6vmin 0 white, 87vmin 23vmin 0 white, 65vmin 31vmin 0 white, 18vmin 46vmin 0 white, 45vmin 33vmin 0 white, 35vmin 33vmin 0 white, 28vmin 17vmin 0 white, 63vmin 36vmin 0 white, 30vmin 47vmin 0 white, 57vmin 14vmin 0 white;
+}
+#card:after {
+  height: 3px;
+  width: 3px;
+  -webkit-transform: translateZ(2rem);
+          transform: translateZ(2rem);
+  box-shadow: 81vmin 36vmin 0 white, 54vmin 23vmin 0 white, 53vmin 34vmin 0 white, 58vmin 23vmin 0 white, 52vmin 19vmin 0 white, 37vmin 23vmin 0 white, 14vmin 39vmin 0 white, 18vmin 10vmin 0 white, 5vmin 14vmin 0 white, 79vmin 35vmin 0 white, 49vmin 33vmin 0 white, 51vmin 17vmin 0 white, 16vmin 11vmin 0 white, 82vmin 7vmin 0 white, 65vmin 23vmin 0 white, 77vmin 13vmin 0 white, 43vmin 24vmin 0 white, 83vmin 44vmin 0 white, 24vmin 40vmin 0 white, 44vmin 8vmin 0 white, 43vmin 43vmin 0 white, 49vmin 7vmin 0 white, 6vmin 40vmin 0 white, 44vmin 25vmin 0 white, 77vmin 34vmin 0 white, 39vmin 43vmin 0 white, 63vmin 46vmin 0 white, 57vmin 32vmin 0 white, 13vmin 33vmin 0 white, 48vmin 18vmin 0 white, 1vmin 15vmin 0 white, 69vmin 8vmin 0 white, 30vmin 42vmin 0 white, 83vmin 15vmin 0 white, 67vmin 16vmin 0 white, 22vmin 42vmin 0 white, 78vmin 50vmin 0 white, 46vmin 47vmin 0 white, 21vmin 42vmin 0 white, 75vmin 31vmin 0 white, 4vmin 23vmin 0 white, 40vmin 35vmin 0 white, 74vmin 1vmin 0 white, 22vmin 32vmin 0 white, 15vmin 49vmin 0 white, 25vmin 50vmin 0 white, 71vmin 32vmin 0 white, 39vmin 23vmin 0 white, 1vmin 17vmin 0 white, 46vmin 23vmin 0 white;
 }
 
 body {
